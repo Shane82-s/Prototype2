@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Mental Health Support</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Digital Mental Health Support</h1>
+        <p>For Students in Higher Education</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#resources">Resources</a>
+        <a href="#mood">Mood Tracker</a>
+        <a href="#contact">Contact</a>
+    </nav>
+<main>
+    <!-- Home -->
+    <section id="home" class="card">
+        <h2>Welcome</h2>
+        <p>
+            This platform provides mental health and psychological support for students in higher education. Explore
+            resources, connect with counselors, and take care of your well-being.
+        </p>
+    </section>
+
+  
+
+    <!-- New Stress Relief Tips Section -->
+    <section id="stress" class="card">
+        <h2>Stress-Relieving Tips</h2>
+        <ul>
+            <li>🌿 Take 5–10 minute breaks every hour to recharge.</li>
+            <li>🧘 Practice deep breathing or short meditation sessions.</li>
+            <li>🚶 Go for a walk outside to clear your mind.</li>
+            <li>📱 Limit screen time before bed to improve sleep quality.</li>
+            <li>💬 Talk to friends, family, or a counselor when feeling overwhelmed.</li>
+        </ul>
+    </section>
+
+    <!-- New Study Tips Section -->
+    <section id="study" class="card">
+        <h2>Study Tips for Success</h2>
+        <ul>
+            <li>📅 Use a planner to organize tasks and avoid last-minute cramming.</li>
+            <li>⏳ Break study time into focused 25–30 minute sessions (Pomodoro method).</li>
+            <li>✍️ Take handwritten notes to improve memory retention.</li>
+            <li>💧 Stay hydrated and eat brain-boosting foods.</li>
+            <li>😴 Get enough sleep — a well-rested mind learns faster.</li>
+        </ul>
+    </section>
+
+  
+    
+</main>
+
+    <main>
+        
+
+        <section id="resources" class="card">
+            <h2>Resources</h2>
+            <ul>
+                <li><strong>Stress Management Tips</strong> – Learn how to cope with exam pressure and academic stress.</li>
+                <li><strong>Mindfulness Exercises</strong> – Simple breathing and meditation techniques for daily practice.</li>
+                <li><strong>Support Groups</strong> – Connect with peers who understand what you’re going through.</li>
+            </ul>
+
+            <!-- Added Audio Tracks -->
+            <h3>Relaxation Audio</h3>
+            <div class="audio-library">
+                <div class="audio-card">
+                    <p><strong>🎵 Cheerful Vibes</strong></p>
+                    <audio controls>
+                        <source src="cheer up.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-card">
+                    <p><strong>🧘 Calm Meditation</strong></p>
+                    <audio controls>
+                        <source src="medation.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-card">
+                    <p><strong>🌿 Mind Relaxation</strong></p>
+                    <audio controls>
+                        <source src="mind relaxation.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="audio-card">
+                    <p><strong>🌙 Deep Sleep Aid</strong></p>
+                    <audio controls>
+                        <source src="sleep.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+
+            <a href="#" class="btn">Explore More</a>
+        </section>
+
+        <!-- Mood Tracker Section -->
+        <section id="mood" class="card">
+            <h2>Mood Tracker</h2>
+            <p>How are you feeling today? Select your mood:</p>
+            <div class="mood-options">
+                <button class="mood-btn" onclick="setMood('Happy')">😀 Happy</button>
+                <button class="mood-btn" onclick="setMood('Okay')">🙂 Okay</button>
+                <button class="mood-btn" onclick="setMood('Neutral')">😐 Neutral</button>
+                <button class="mood-btn" onclick="setMood('Sad')">😔 Sad</button>
+                <button class="mood-btn" onclick="setMood('Very Sad')"> 😢Very Sad</button>
+            </div>
+            <p id="moodMessage"></p>
+        </section>
+
+        <section id="contact" class="card">
+            <h2>Contact Options</h2>
+            <p>Select how you’d like to connect:</p>
+            <div class="contact-options">
+                <button class="btn" onclick="showContactSlide('ai')">Talk to AI Doctor</button>
+                <button class="btn" onclick="showContactSlide('human')">Talk to a Doctor</button>
+            </div>
+
+            <div id="contact-slides">
+                <!-- AI Doctor Chat -->
+                <div id="ai" class="slide hidden">
+                    <h3>AI Doctor (24/7 Chatbot)</h3>
+                    <div class="chatbox">
+                        <div id="chatlog">
+                            <p><strong>AI Doctor:</strong> Hello! How are you feeling today?</p>
+                        </div>
+                        <input type="text" id="userInput" placeholder="Type your message..." />
+                        <button onclick="sendMessage()" class="btn">Send</button>
+                    </div>
+                </div>
+
+                <!-- Human Doctor Contact Form -->
+                <div id="human" class="slide hidden">
+                    <h3>Contact a Human Doctor</h3>
+                    <form id="contactForm">
+                        <label for="name">Name:</label><br />
+                        <input type="text" id="name" required /><br /><br />
+
+                        <label for="email">Email:</label><br />
+                        <input type="email" id="email" required /><br /><br />
+
+                        <label for="message">Message:</label><br />
+                        <textarea id="message" rows="4" required></textarea><br /><br />
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Digital Mental Health Support | Prototype</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

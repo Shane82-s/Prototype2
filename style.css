@@ -1,0 +1,145 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f7f9;
+  color: #333;
+}
+header {
+  background: #4a90e2;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+nav {
+  background: #0558ab;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+nav a {
+  color: white;
+  margin: 0 18px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+.card {
+  background: white;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+.btn {
+  display: inline-block;
+  background: #4a90e2;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin: 12px 6px 0 0;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn:hover {
+  background: #357ABD;
+  transform: scale(1.05);
+}
+.contact-options {
+  margin-bottom: 15px;
+}
+.slide {
+  margin-top: 15px;
+  animation: fadeIn 0.5s ease;
+}
+.hidden {
+  display: none;
+}
+.chatbox {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background: #fafafa;
+}
+#chatlog {
+  height: 150px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin-bottom: 10px;
+  background: white;
+}
+#userInput {
+  width: 70%;
+  padding: 8px;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #eee;
+  margin-top: 20px;
+}
+
+/* Mood Tracker */
+.mood-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+.mood-btn {
+  flex: 1;
+  min-width: 100px;
+  padding: 10px;
+  font-size: 1rem;
+  background: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.mood-btn:hover {
+  background: #4a90e2;
+  color: white;
+  transform: scale(1.05);
+}
+#moodMessage {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #0558ab;
+}
+
+/* Audio Library */
+.audio-library {
+  display: grid;
+  gap: 15px;
+  margin-top: 15px;
+}
+.audio-card {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9fbfd;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.audio-card p {
+  margin: 0 0 8px 0;
+  font-weight: bold;
+  color: #0558ab;
+}
